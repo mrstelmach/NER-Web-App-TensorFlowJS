@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Named Entity Recognition website powered by Tensorflow.js</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="body">
+
+	<div align="left">
+		<h1>Named Entity Recognition</h1>
+		<span><b>powered by</b></span>
+		<img src="images/tensorflowjs.png" alt="Tensorflow.js logo" style="width:325px;height:75px;vertical-align:middle;">
+	</div><hr>
+	
+    <p align="left">Search for 
+	<span style="font-weight:bold;background-color:LawnGreen;">Person</span>, 
+	<span style="font-weight:bold;background-color:NavajoWhite;">Organization</span>, 
+	<span style="font-weight:bold;background-color:LightPink;">Location</span> or 
+	<span style="font-weight:bold;background-color:LightSkyBlue;">Miscellaneous</span>
+	types of entities. Hover your mouse over the colored text in the output field to get a detailed entity tag.</p><hr><br>
+	
+	<textarea class="text-input" rows="8" cols="80" placeholder="Type in text to search for Named Entities..." id='inputText'></textarea>
+    <div style="padding:15px;">
+		<div class="spinner-border text-primary" 
+			id="spinner" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+		<button id="clickButton" type="button" class="button" onclick="clickForNerTags();">Search</button>
+	</div>
+	
+	<div class="text-output" id="newText"><p class="output-placeholder">NER tagged text appears in here...</p></div><br><hr>
+	
+	<div class="caption"><b>Developed by <a href="https://pl.linkedin.com/in/marek-stelmach" target="_blank">Marek Stelmach</a></b></div>
+	
+    <script src="javascript/textFunctions.js"></script>
+	<script src="javascript/inference.js"></script>
+	<script src="vocabs/wordVocab.js"></script>
+	<script src="vocabs/charVocab.js"></script>
+	<script src="vocabs/labels.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0/dist/tf.min.js"></script>
+	<script>
+		loadModel();
+		function clickForNerTags() {
+			var inputVal = document.getElementById("inputText").value;
+			var outputVal = getNerTags(inputVal);
+			document.getElementById("newText").innerHTML = outputVal;
+		}
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.body {
+	text-align: center;
+	margin-top: 25px;
+    margin-right: 200px;
+    margin-bottom: 25px;
+    margin-left: 200px;
+	background: linear-gradient(rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.9)), url('images/background.png');
+}
+
+.highlightPer {background-color: LawnGreen;}
+.highlightOrg {background-color: NavajoWhite;}
+.highlightLoc {background-color: LightPink;}
+.highlightMisc {background-color: LightSkyBlue;}
+
+.button {
+	display: none;
+	padding: 10px 30px;
+	font-size: 18px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #D2691E;
+	background-color: #D3D3D3;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 0 5px #999;
+}
+.button:hover {
+	background-color: #A9A9A9;
+}
+.button:active {
+	outline: none;
+	background-color: #A9A9A9;
+	box-shadow: 0 5px #666;
+	transform: translateY(2px);
+}
+.button:focus {
+    outline: none;
+}
+
+.text-input {
+	outline: none;
+	width: 65%;
+	height: 130px;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	resize: none;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.text-output {
+	background-color:#F8F8FF;
+	width: 65%;
+	min-height: 130px;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	margin: 5px auto;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.output-placeholder {
+	position: relative;
+	text-align: left;
+	color: gray;
+}
+
+.caption {
+	text-align: right;
+}

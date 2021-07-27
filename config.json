@@ -1,0 +1,10 @@
+{
+  "PATH_TRAIN": "data/conll2003/train.txt",
+  "PATH_VALID": "data/conll2003/valid.txt",
+  "PATH_TEST": "data/conll2003/test.txt",
+  "MAX_SEQ_LEN": 64,
+  "MAX_WRD_LEN": 16,
+  "WORD_VOCAB_SIZE": 17723,
+  "CHAR_VOCAB_SIZE": 87,
+  "NUM_CLASSES": 9
+}

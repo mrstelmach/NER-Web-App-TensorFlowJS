@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+model_tf/hptuning/
+glove.6B.100d.txt
+data.joblib
