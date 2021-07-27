@@ -14,7 +14,7 @@ function changeDisplayType (id, display = 'none') {
  * Load keras model in tfjs format
  */	
 async function loadModel() {
-	model = await tf.loadLayersModel('https://apple-glowing-porter.glitch.me/model/model.json');
+	model = await tf.loadLayersModel('https://ner-tensorflowjs.glitch.me/web-app/tfjs_model/model.json');
 	console.log("Keras model loaded");
 	changeDisplayType('spinner', 'none');
 	changeDisplayType('clickButton', 'inline-block');
