@@ -26,7 +26,7 @@ async function loadModel() {
 	modelLoadingMsg += "Please click OK and wait patiently until the SEARCH button is visible.";
 	alert(modelLoadingMsg);
 	
-	const model = await tf.loadLayersModel(modelLoc);
+	model = await tf.loadLayersModel(modelLoc);
 	
 	// sample warmup prediction for caching shader programs during compilation
 	let sampleInput = [
