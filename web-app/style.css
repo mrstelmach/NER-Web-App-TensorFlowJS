@@ -2,9 +2,9 @@
 	text-align: center;
 	height: 85%;
 	margin-top: 25px;
-    margin-right: 200px;
-    margin-bottom: 25px;
-    margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 25px;
+	margin-left: 200px;
 	background: linear-gradient(rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.9)), url('images/background.png');
 }
 
@@ -37,7 +37,7 @@
 	transform: translateY(2px);
 }
 .button:focus {
-    outline: none;
+	outline: none;
 }
 
 .text-input {
