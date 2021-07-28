@@ -1,4 +1,10 @@
 
+// define global constants
+const maxSeqLen = 64;
+const maxWrdLen = 16;
+const modelLoc = 'https://ner-tensorflowjs.glitch.me/web-app/tfjs_model/model.json';
+
+
 /**
  * Change display type for given html element with specified id
  * @param  {String}		id 			Id of html element (e.g. button)
@@ -14,8 +20,24 @@ function changeDisplayType (id, display = 'none') {
  * Load keras model in tfjs format
  */	
 async function loadModel() {
-	model = await tf.loadLayersModel('https://ner-tensorflowjs.glitch.me/web-app/tfjs_model/model.json');
-	console.log("Keras model loaded");
+	
+	var modelLoadingMsg = "Before the first use, it might take a while for the model to fully load and compile.";
+	modelLoadingMsg += "\r\n";
+	modelLoadingMsg += "Please click OK and wait patiently until the SEARCH button is visible.";
+	alert(modelLoadingMsg);
+	
+	const model = await tf.loadLayersModel(modelLoc);
+	
+	// sample warmup prediction for caching shader programs during compilation
+	let sampleInput = [
+	tf.zeros([1, maxSeqLen]), 
+	tf.zeros([1, maxSeqLen, maxWrdLen]), 
+	tf.zeros([1, maxSeqLen])
+	];
+	let samplePred = await model.predict(sampleInput);
+	
+	console.log("Keras model loaded.");
+	
 	changeDisplayType('spinner', 'none');
 	changeDisplayType('clickButton', 'inline-block');
 }
@@ -41,7 +63,7 @@ function getNerTags(inputVal) {
     			
 	const pred = getPrediction(
 	inputVal, wordVocab, charVocab, labels, window.model, 
-	sequenceLength = 64, wordLength = 16
+	sequenceLength = maxSeqLen, wordLength = maxWrdLen
 	);
 	
 	let perTags = ["B-PER", "I-PER"];
