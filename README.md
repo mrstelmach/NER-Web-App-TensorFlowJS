@@ -16,9 +16,9 @@ Simply type in any English text and click on <b>Search</b> button to find out wh
 All development steps are outlined in `ner-web-app-development.pdf` notebook (please use Download button for viewing). In a nutshell, a <b><a href="https://www.clips.uantwerpen.be/conll2003/ner/">CoNLL-2003 dataset</a></b> was used to build a LSTM, CNN & Embedding based deep learning model with <b>Python</b> in <b><a href="https://www.tensorflow.org/">TensorFlow</a></b>, <b><a href="https://keras.io/keras_tuner/">KerasTuner</a></b> and <b><a href=https://www.tensorflow.org/js>TensorFlow.js</a></b> for web application model deployment. Pretrained <b><a href="https://nlp.stanford.edu/projects/glove/">GloVe embeddings</a></b> were also utilised. Essential packages versions are available in `environment/environment.yml` file. All files required to create the web app (.html, .css, .js) are available in `web-app` folder.
 
 ## Inference
-To reproduce web application results in Python please run code for inference on sample txt file:
+To reproduce web application results in Python please run code for inference from project directory on sample txt file:
 ```
-$python -m utils.inference 'data/sample.txt'
+$ python -m utils.inference 'data/sample.txt'
 ```
 
 The output produced:
