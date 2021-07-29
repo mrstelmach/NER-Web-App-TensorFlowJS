@@ -14,3 +14,12 @@ Simply type in any English text and click on <b>Search</b> button to find out wh
 
 ## Development
 All development steps are outlined in `ner-web-app-development.pdf` notebook (please use Download button for viewing). In a nutshell, a <b><a href="https://www.clips.uantwerpen.be/conll2003/ner/">CoNLL-2003 dataset</a></b> was used to build a LSTM, CNN & Embedding based deep learning model with <b>Python</b> in <b><a href="https://www.tensorflow.org/">TensorFlow</a></b>, <b><a href="https://keras.io/keras_tuner/">KerasTuner</a></b> and <b><a href=https://www.tensorflow.org/js>TensorFlow.js</a></b> for web application model deployment. Pretrained <b><a href="https://nlp.stanford.edu/projects/glove/">GloVe embeddings</a></b> were also utilised. Essential packages versions are available in `environment/environment.yml` file. All files required to create the web app (.html, .css, .js) are available in `web-app` folder.
+
+## Inference
+To reproduce web application results in Python please run code for inference on sample txt file:
+```
+$python -m utils.inference 'data/sample.txt'
+```
+
+The output produced:
+> [('The', 'O'), ('2020', 'O'), ('UEFA', 'B-MISC'), ('European', 'I-MISC'), ('Football', 'I-MISC'), ('Championship', 'I-MISC'), ('was', 'O'), ('the', 'O'), ('16th', 'O'), ('UEFA', 'B-MISC'), ('European', 'I-MISC'), ('Championship', 'I-MISC'), (',', 'O'), ('the', 'O'), ('quadrennial', 'O'), ('international', 'O'), ('men', 'O'), ("'s", 'O'), ('football', 'O'), ('championship', 'O'), ('of', 'O'), ('Europe', 'B-LOC'), ('organised', 'O'), ('by', 'O'), ('the', 'O'), ('Union', 'B-ORG'), ('of', 'I-ORG'), ('European', 'B-ORG'), ('Football', 'I-ORG'), ('Associations', 'I-ORG'), ('(', 'O'), ('UEFA', 'B-ORG'), (')', 'O'), ('.', 'O'), ('To', 'O'), ('celebrate', 'O'), ('the', 'O'), ('60th', 'O'), ('anniversary', 'O'), ('of', 'O'), ('the', 'O'), ('European', 'B-MISC'), ('Championship', 'I-MISC'), ('competition', 'O'), (',', 'O'), ('UEFA', 'B-ORG'), ('president', 'O'), ('Michel', 'B-PER'), ('Platini', 'I-PER'), ('declared', 'O'), ('that', 'O'), ('the', 'O'), ('tournament', 'O'), ('would', 'O'), ('be', 'O'), ('hosted', 'O'), ('in', 'O'), ('several', 'O'), ('nations', 'O'), ('.', 'O')]
