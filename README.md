@@ -4,3 +4,6 @@ Named Entity Recognition Web Application powered by Tensorflow.js. It helps to i
 
 ## Demo
 Live working demo can be accessed under the following link: https://ner-tensorflowjs.glitch.me/web-app/ner-web-app.html.
+
+## Browser support
+Application is available in any modern browser supporting JavaScript. Particularly, it has been thoroughly examined in Chrome...
