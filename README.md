@@ -9,4 +9,4 @@ Live working demo can be accessed under the following link: https://ner-tensorfl
 Application is available in most popular modern browsers supporting JavaScript and pop-ups allowed. Particularly, it has been thoroughly tested in Google Chrome 92.0.4515.107, Firefox 90.0.2 and Microsoft Edge 91.0.864.71. Currently only Internet Explorer is not supported.
 
 ## Usage
-Simply type in any English text and click on <b>Search</b> button to find out what entities are detected. For example,  
+Simply type in any English text and click on <b>Search</b> button to find out what entities are detected. A <i>"The 2020 UEFA European Football Championship was the 16th UEFA European Championship, the quadrennial international men's football championship of Europe organised by the Union of European Football Associations (UEFA). To celebrate the 60th anniversary of the European Championship competition, UEFA president Michel Platini declared that the tournament would be hosted in several nations."</i> text from the header might be use as an example.  
